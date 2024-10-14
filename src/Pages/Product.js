@@ -1,9 +1,13 @@
 import React from 'react'
+import Single from '../components/Single.js'
+import { singleProduct } from '../data.ts'
 
-export default function Product() {
+const Product = () => {
   return (
     <div>
-      Product
+      <Single {...singleProduct}/>
     </div>
   )
 }
+
+export default Product

@@ -13,7 +13,7 @@ export default function Menu() {
 
           {item.listItems.map((listItem) => (
             <Link
-              to="/"
+              to={listItem.url}
               className="flex items-center gap-[10px] p-[10px] rounded-[5px] hover:bg-[#07466c]"
               key={listItem.id}
             >

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import DataTable from '../components/DataTable'
 import { userRows } from '../data.ts'
-import AddUser from '../components/AddUser.js';
+import Add from '../components/Add.js';
 
 const columns = [
   { field: "id", headerName: "ID", width: 90 },
@@ -48,7 +48,7 @@ const columns = [
   {
     field: "createdAt",
     headerName: "Created At",
-    width: 200,
+    width: 150,
     type:"String"
   },
   {
@@ -71,7 +71,7 @@ export default function Users() {
       </div>
     
       <DataTable slug="users" columns={columns} rows={userRows} />
-      {open && <AddUser slug="users" columns={columns} setOpen={setOpen} />}
+      {open && <Add slug="users" columns={columns} setOpen={setOpen} />}
     </div>
   )
 }
