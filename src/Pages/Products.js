@@ -72,8 +72,8 @@ export default function Products() {
         </button>
       </div>
 
-      <DataTable slug="users" columns={columns} rows={products} />
-      {open && <Add slug="product" columns={columns} setOpen={setOpen} />}
+      <DataTable slug="products" columns={columns} rows={products} />
+      {open && <Add slug="products" columns={columns} setOpen={setOpen} />}
     </div>
   );
 }

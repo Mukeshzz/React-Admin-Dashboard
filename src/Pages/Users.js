@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
-import DataTable from '../components/DataTable'
-import { userRows } from '../data.ts'
-import Add from '../components/Add.js';
+import React, { useState } from "react";
+import DataTable from "../components/DataTable";
+import { userRows } from "../data.ts";
+import Add from "../components/Add.js";
 
 const columns = [
   { field: "id", headerName: "ID", width: 90 },
@@ -16,62 +16,66 @@ const columns = [
           alt=""
           className="h-8 w-8 rounded-[50%] object-cover"
         />
-      );
+      )
     },
   },
-  
+
   {
     field: "firstName",
     headerName: "First name",
     width: 100,
-    type:"String"
+    type: "String",
   },
   {
     field: "lastName",
     headerName: "Last name",
     width: 100,
-    type:"String"
+    type: "String",
   },
-  
+
   {
     field: "email",
     headerName: "Email",
     width: 200,
-    type:"String"
+    type: "String",
   },
   {
     field: "phone",
     headerName: "Phone",
     width: 200,
-    type:"String"
+    type: "String",
   },
   {
     field: "createdAt",
     headerName: "Created At",
     width: 150,
-    type:"String"
+    type: "String",
   },
   {
     field: "verified",
     headerName: "Verified",
     width: 150,
-    type: "boolean"
+    type: "boolean",
   },
 ];
 
 export default function Users() {
-
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
 
   return (
     <div>
-      <div className='flex items-center gap-5 m-3'>
-        <h1 className='text-4xl font-bold'>Users</h1>
-        <button onClick={() => setOpen(true)} className='bg-[#EAD8B1] text-black rounded p-1 cursor-pointer'>Add New Users</button>
+      <div className="flex items-center gap-5 m-3">
+        <h1 className="text-4xl font-bold">Users</h1>
+        <button
+          onClick={() => setOpen(true)}
+          className="bg-[#EAD8B1] text-black rounded p-1 cursor-pointer"
+        >
+          Add New Users
+        </button>
       </div>
-    
+
       <DataTable slug="users" columns={columns} rows={userRows} />
       {open && <Add slug="users" columns={columns} setOpen={setOpen} />}
     </div>
-  )
+  );
 }
