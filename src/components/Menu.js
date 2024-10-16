@@ -6,8 +6,8 @@ export default function Menu() {
   return (
     <div>
       {menu.map((item) => (
-        <div className="flex flex-col mb-5" key={item.id}>
-          <span className="text-xs font-extralight text-[#6A9AB0] uppercase">
+        <div className="flex flex-col mb-5 gap-[10px]" key={item.id}>
+          <span className="text-xs font-extralight text-[#6A9AB0] uppercase max-sm:hidden">
             {item.title}
           </span>
 
@@ -19,7 +19,7 @@ export default function Menu() {
             >
               <img src={`/${listItem.icon}`} alt="" />
 
-              <span>{listItem.title}</span>
+              <span className="max-sm:hidden">{listItem.title}</span>
             </Link>
           ))}
         </div>

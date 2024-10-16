@@ -50,7 +50,7 @@ const data = [
 const BigChartbox = () => {
   return (
     <div className='h-[100%] w-[100%] flex flex-col justify-between'>
-      <h1 className='font-semibold text-2xl'>Revenue Analytics</h1>
+      <h1 className='font-semibold text-2xl max-lg:text-xl lg:text-2xl'>Revenue Analytics</h1>
       <div className='w-[100%] h-[300px]'>
       <ResponsiveContainer width="99%" height="100%">
         <AreaChart

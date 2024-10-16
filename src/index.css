@@ -23,7 +23,18 @@
   width: 240px;
   padding: 5px 20px;
   border-right: 2px solid #3A6D8C;
+ 
 }
+
+@media (max-width: 480px) {
+
+  .menuContainer {
+    width: max-content;
+  }
+  
+}
+
+
 
 .contentContainer {
   width: 100%;

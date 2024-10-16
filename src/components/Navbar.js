@@ -10,9 +10,9 @@ export default function Navbar() {
         <span>Rocky</span>
       </div>
       <div className="flex items-center gap-5">
-        <img src="/search.svg" alt="" />
-        <img src="/app.svg" alt="" />
-        <img src="/expand.svg" alt="" />
+        <img src="/search.svg" alt="" className="max-sm:hidden"/>
+        <img src="/app.svg" alt="" className="max-sm:hidden"/>
+        <img src="/expand.svg" alt="" className="max-sm:hidden"/>
         <div className='relative'>
           <img src="/notifications.svg" alt="" />
           <span className="w-[16px] h-[16px] rounded-[50%] text-white bg-red-600 absolute top-[-10px] right-[-10px] flex items-center justify-center text-xs">1</span>
@@ -21,11 +21,11 @@ export default function Navbar() {
           <img
             src="https://eclatsuperior.com/wp-content/uploads/2021/04/man4.jpg"
             alt=""
-            className="w-[26px] h-[26px] rounded-[50%] object-cover"
+            className="w-[26px] h-[26px] rounded-[50%] object-cover "
           />
           <span>Mukesh</span>
         </div>
-        <img src="/settings.svg" alt="" />
+        <img src="/settings.svg" alt="" className="max-sm:hidden"/>
       </div>
       
     </div>

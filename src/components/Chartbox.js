@@ -5,14 +5,14 @@ import { Line, LineChart, ResponsiveContainer, Tooltip } from "recharts";
 
 const Chartbox = ({color,icon,title, dataKey, number, percentage, chartData}) => {
   return (
-    <div className="flex h-[100%]">
-      <div className="flex flex-col justify-between flex-[3]">
-        <div className="flex items-center  gap-[10px]">
+    <div className="flex h-[100%] max-md:flex-col">
+      <div className="flex flex-col justify-between flex-[3] max-md:gap-3">
+        <div className="flex items-center  gap-[10px] max-lg:text-sm ">
           <img src={`${icon}`} alt=""/>
          
           <span>{title}</span>
         </div>
-        <h1 className="font-semibold text-4xl">{number}</h1>
+        <h1 className="font-semibold text-4xl max-xl:text-3xl max-lg:text-2xl">{number}</h1>
         <Link to="/" style={{color}}>View All</Link>
       </div>
       <div className="flex flex-col justify-between flex-[2]">
@@ -35,7 +35,7 @@ const Chartbox = ({color,icon,title, dataKey, number, percentage, chartData}) =>
           </ResponsiveContainer>
         </div>
         <div className="flex flex-col text-right">
-          <span className="font-bold text-xl" style={{color:percentage<0 ? "tomato" : "limegreen"}}>{percentage}%</span>
+          <span className="font-bold text-xl max-lg:text-sm max-xl:text-base" style={{color:percentage<0 ? "tomato" : "limegreen"}}>{percentage}%</span>
           <span  className="text-sm">this month</span>
         </div>
       </div>
